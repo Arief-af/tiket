@@ -88,14 +88,14 @@ export default {
  
    this.total = this.hargaD*this.penumpangD + this.hargaA*this.penumpangA
 
-   this.afterDis = this.total
+   
    if (this.total >= 500000) {
        let discount = this.total/100*10
        this.afterDis = this.total-discount
        this.discount = this.total - this.afterDis
        this.alert = true
    }else{
-       this.discount = 0
+       this.afterDis = this.total
    }
  }
 }
