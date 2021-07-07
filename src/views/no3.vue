@@ -94,6 +94,8 @@ export default {
        this.afterDis = this.total-discount
        this.discount = this.total - this.afterDis
        this.alert = true
+   }else{
+       this.discount = 0
    }
  }
 }
