@@ -41,9 +41,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   data(){
     return{
@@ -94,8 +91,6 @@ export default {
        this.afterDis = this.total-discount
        this.discount = this.total - this.afterDis
        this.alert = true
-   }else{
-       this.afterDis = this.total
    }
  }
 }
