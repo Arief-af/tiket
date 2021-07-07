@@ -88,6 +88,7 @@ export default {
  
    this.total = this.hargaD*this.penumpangD + this.hargaA*this.penumpangA
 
+   this.afterDis = this.total
    if (this.total >= 500000) {
        let discount = this.total/100*10
        console.log(discount)
