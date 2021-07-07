@@ -91,7 +91,6 @@ export default {
    this.afterDis = this.total
    if (this.total >= 500000) {
        let discount = this.total/100*10
-       console.log(discount)
        this.afterDis = this.total-discount
        this.discount = this.total - this.afterDis
        this.alert = true
