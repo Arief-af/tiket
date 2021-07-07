@@ -3,7 +3,7 @@
     <div class="card shadow px-5">
       <div class="card-titile py-3">
         <div class="row justify-content-center">
-        <div v-show="alert" class="alert bg-warning text-white text-center py-2 rounded mb-2">selamat anda mendapatkan discount 10%</div>
+        <div v-show="alert && total >= 500000" class="alert bg-warning text-white text-center py-2 rounded mb-2">selamat anda mendapatkan discount 10%</div>
           <div class="col-auto">
            
             <label>Tujuan : </label>
@@ -33,10 +33,14 @@
         <div class="text-center">Harga tiket dewasa/orang : {{hargaD}} </div>
         <div class="text-center">Harga tiket anak /orang : {{hargaA}} </div>
         <div class="text-center">Sub total : {{total}} </div>
-        <div class="text-center">Discount : {{discount}} </div>
+        <div v-if="total >= 500000" class="text-center">Discount : {{discount}} </div>
+        <div v-else class="text-center">Discount : 0</div>
         <div class="text-center">Total harga tiket : {{afterDis}}</div>
       </div>
+      <p class="text-end text-danger" style="font-size: 14px">*pembelian diatas 500000 akan mendapatkan discount 10%</p>
     </div>
+
+    
   </div>
 </template>
 

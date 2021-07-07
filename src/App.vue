@@ -9,7 +9,7 @@
   
     <router-view/>
 
-  <div class="footer bg-white shadow text-center position-absolute bottom-0 py-4">
+  <div class="footer bg-white shadow text-center py-4">
     Created by Arieafn
   </div>
 
@@ -35,6 +35,10 @@ export default {
 
 
 <style>
+.footer{
+  position: fixed;
+  bottom: 0;
+}
 body{
   background-color: #42b983 !important;
 }
