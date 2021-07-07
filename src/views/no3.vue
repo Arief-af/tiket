@@ -35,7 +35,8 @@
         <div class="text-center">Sub total : {{total}} </div>
         <div v-if="total >= 500000" class="text-center">Discount : {{discount}} </div>
         <div v-else class="text-center">Discount : 0</div>
-        <div class="text-center">Total harga tiket : {{afterDis}}</div>
+        <div v-if="total >= 500000" class="text-center">Total harga tiket : {{afterDis}}</div>
+        <div v-else class="text-center">Total harga tiket : {{total}}</div>
       </div>
       <p class="text-end text-danger" style="font-size: 14px">*pembelian diatas 500000 akan mendapatkan discount 10%</p>
     </div>
@@ -95,8 +96,6 @@ export default {
        this.afterDis = this.total-discount
        this.discount = this.total - this.afterDis
        this.alert = true
-   }else{
-       this.afterDis = this.total
    }
  }
 }
